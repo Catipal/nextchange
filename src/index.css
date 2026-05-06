@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  --accent-color: #DFFF00;
+}
+
+:root.dark {
+  --bg-primary: #282f35;
+  --bg-secondary: #2f373f;
+  --bg-tertiary: #38414a;
+  --border-color: #3b444d;
+  --text-primary: #EAECEF;
+  --text-secondary: #848E9C;
+  --item-hover: rgba(255, 255, 255, 0.05);
+}
+
+:root.light {
+  --bg-primary: #B2B5B9;
+  --bg-secondary: #D1D4D7;
+  --bg-tertiary: #A1A4A8;
+  --border-color: #8E9194;
+  --text-primary: #121619;
+  --text-secondary: #4A4D51;
+  --item-hover: rgba(0, 0, 0, 0.1);
+  --accent-color: #8DAA00; /* Darker accent for more grey background */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+
+/* Premium Thin Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+/* Custom styles for the grid items to match the theme */
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+.react-grid-item.react-grid-placeholder {
+  background: var(--accent-color);
+  opacity: 0.2;
+  transition-duration: 100ms;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+.react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid var(--text-secondary);
+  border-bottom: 2px solid var(--text-secondary);
+}
+.react-resizable-handle:hover::after {
+  border-color: var(--accent-color);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

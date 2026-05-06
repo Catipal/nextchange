@@ -1,0 +1,24 @@
+{
+  "port": 3001,
+  "p2pPort": 9735,
+  "p2pHost": "0.0.0.0",
+  "bootstrapPeers": [
+    "ws://bootstrap1.nextchange.hub:9735",
+    "ws://bootstrap2.nextchange.hub:9735"
+  ],
+  "customPeers": [],
+  "maxPeers": 50,
+  "peerTimeout": 30000,
+  "jwtSecret": "2f6648a45a83a2c9af6b4b2fd482519ae983b382f7e613415c9f3222f66231ac",
+  "nodePublicKey": "03c7bc3aae853b6edde12bf8425cd1f7bf85cf728482933068582bf63561ebb1c0",
+  "nodePrivateKey": "2ef4d3db818402e2e061c18e9dc1d25d4e107ea19685a3c43ce1e6b292747909",
+  "btcDemoMode": true,
+  "bpsDemoMode": true,
+  "ethDemoMode": true,
+  "tradePruneEnabled": true,
+  "tradePruneMaxMB": 500,
+  "registryPruneEnabled": true,
+  "registryPruneMaxMB": 500,
+  "bpsPruneEnabled": true,
+  "bpsPruneMaxMB": 1000
+}
