@@ -86,7 +86,8 @@
       "target": "nsis"
     },
     "mac": {
-      "target": "dmg"
+      "target": "dmg",
+      "identity": null
     },
     "linux": {
       "target": "AppImage"
