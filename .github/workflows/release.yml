@@ -15,8 +15,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        # Build for Windows, macOS, and Linux
-        os: [windows-latest, macos-latest, ubuntu-latest]
+        # Build for Windows and Linux
+        os: [windows-latest, ubuntu-latest]
 
     steps:
       - name: Checkout Code

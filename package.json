@@ -85,10 +85,6 @@
     "win": {
       "target": "nsis"
     },
-    "mac": {
-      "target": "dmg",
-      "identity": null
-    },
     "linux": {
       "target": "AppImage"
     }
